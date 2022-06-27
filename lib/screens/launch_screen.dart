@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:games_app/screens/no_internet.dart';
 import 'package:loading_indicator/loading_indicator.dart';
 
 class LaunchScreen extends StatefulWidget {
@@ -37,9 +38,8 @@ class _LaunchScreenState extends State<LaunchScreen> {
               Color.fromARGB(255, 246, 144, 112),
             ],
           )),
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.center,
+          child: Column(mainAxisAlignment: MainAxisAlignment.end,
+              // crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Align(
                   alignment: Alignment.center,
@@ -54,7 +54,9 @@ class _LaunchScreenState extends State<LaunchScreen> {
                           ),
                         )
                       : ElevatedButton(
-                          onPressed: (() {}),
+                          onPressed: (() {
+                            // NoInternet();
+                          }),
                           style: ElevatedButton.styleFrom(
                             primary: Colors.white,
                             fixedSize: const Size(140, 30),
@@ -90,7 +92,7 @@ class _LaunchScreenState extends State<LaunchScreen> {
                         ),
                 ),
                 const SizedBox(
-                  height: 30,
+                  height: 30.0,
                 ),
               ]),
         ),
