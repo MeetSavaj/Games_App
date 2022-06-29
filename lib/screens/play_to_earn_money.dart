@@ -30,7 +30,7 @@ class PTEMScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: (() {}),
               style: ElevatedButton.styleFrom(
-                primary: Colors.deepOrange[400],
+                primary: const Color(0xff3C3279),
                 fixedSize: const Size(300, 55),
                 textStyle: const TextStyle(
                     fontSize: 20,
@@ -60,7 +60,7 @@ class PTEMScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: (() {}),
               style: ElevatedButton.styleFrom(
-                primary: Colors.deepOrange[400],
+                primary: const Color(0xff9B5E31),
                 fixedSize: const Size(300, 55),
                 textStyle: const TextStyle(
                     fontSize: 20,
@@ -90,7 +90,7 @@ class PTEMScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: (() {}),
               style: ElevatedButton.styleFrom(
-                primary: Colors.deepOrange[400],
+                primary: const Color(0xffE95A5E),
                 fixedSize: const Size(300, 55),
                 textStyle: const TextStyle(
                     fontSize: 20,

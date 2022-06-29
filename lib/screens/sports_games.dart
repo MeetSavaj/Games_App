@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:games_app/components/games_data.dart';
 
-class ActionGameScreen extends StatelessWidget {
-  ActionGameScreen({Key? key}) : super(key: key);
+class SportsGameScreen extends StatelessWidget {
+  SportsGameScreen({Key? key}) : super(key: key);
   final List<Map> myProducts =
       List.generate(6, (index) => {"id": index, "name": "Product $index"})
           .toList();
@@ -24,44 +24,44 @@ class ActionGameScreen extends StatelessWidget {
                 fontSize: 20.0,
                 fontWeight: FontWeight.bold),
             backgroundColor: Colors.deepOrange[400],
-            title: const Text("Action Games"),
+            title: const Text("Sports Games"),
           ),
           backgroundColor: Colors.white,
           body: Align(
             alignment: Alignment.center,
             child: GridView.count(crossAxisCount: 3, shrinkWrap: true,
-                // crossAxisSpacing: 2.0,
+                // crossAxisSpacing: 0.0,
                 // mainAxisSpacing: 8.0,
                 children: [
                   GamesAvatar(
                     image: const NetworkImage(
                         "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
-                    name: "Crowd Run 3D",
+                    name: "Garden Bloom",
                   ),
                   GamesAvatar(
                     image: const NetworkImage(
                         "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
-                    name: "Running Jack",
+                    name: "Garden Match 3D",
                   ),
                   GamesAvatar(
                     image: const NetworkImage(
                         "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
-                    name: "K.U.L.I",
+                    name: "The Match-3",
                   ),
                   GamesAvatar(
                     image: const NetworkImage(
                         "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
-                    name: "Cannons & Soldiers",
+                    name: "Diamond Rush",
                   ),
                   GamesAvatar(
                     image: const NetworkImage(
                         "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
-                    name: "Civilizations Wars",
+                    name: "Magic Jewels",
                   ),
                   GamesAvatar(
                     image: const NetworkImage(
                         "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
-                    name: "Taptastic Monsters",
+                    name: "Totemia Cursed Marbles",
                   ),
                 ]),
           )),

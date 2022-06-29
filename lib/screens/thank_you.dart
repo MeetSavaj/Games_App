@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class NoIntScreen extends StatelessWidget {
-  const NoIntScreen({Key? key}) : super(key: key);
+class ThankYouScreen extends StatelessWidget {
+  const ThankYouScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,30 +16,30 @@ class NoIntScreen extends StatelessWidget {
               height: 150.0,
             ),
             Image.asset(
-              'assets/images/no_internet.png',
-              width: 200.0,
-              height: 200.0,
+              'assets/images/thankyou.png',
+              width: 130.0,
+              height: 130.0,
             ),
             const SizedBox(
-              height: 30.0,
+              height: 10.0,
             ),
             const Text(
-              "No Internet Connnection",
+              "Thank You!",
               style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
-                  fontSize: 20.0),
+                  fontSize: 25.0),
             ),
             const SizedBox(
               height: 8.0,
             ),
             const Text(
-              "Make sure internet is On!",
+              "For Using This App",
               style:
                   TextStyle(color: Colors.black, fontWeight: FontWeight.w400),
             ),
             const SizedBox(
-              height: 200.0,
+              height: 320.0,
             ),
             ElevatedButton(
                 onPressed: (() {}),
@@ -56,7 +56,7 @@ class NoIntScreen extends StatelessWidget {
                   ),
                 ),
                 child: const Text(
-                  "Try Again",
+                  "Thank You",
                   style: TextStyle(color: Colors.white),
                 ))
           ],

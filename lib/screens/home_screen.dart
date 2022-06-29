@@ -42,7 +42,12 @@ class HomeScreen extends StatelessWidget {
               height: 15.0,
             ),
             ElevatedButton(
-              onPressed: (() {}),
+              onPressed: (() {
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(builder: (context) => const CheckInt()),
+                // );
+              }),
               style: ElevatedButton.styleFrom(
                 primary: Colors.deepOrange[400],
                 fixedSize: const Size(350, 50),

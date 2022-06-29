@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:games_app/components/games_data.dart';
 
-class ActionGameScreen extends StatelessWidget {
-  ActionGameScreen({Key? key}) : super(key: key);
+class StrategyGameScreen extends StatelessWidget {
+  StrategyGameScreen({Key? key}) : super(key: key);
   final List<Map> myProducts =
       List.generate(6, (index) => {"id": index, "name": "Product $index"})
           .toList();
@@ -24,7 +24,7 @@ class ActionGameScreen extends StatelessWidget {
                 fontSize: 20.0,
                 fontWeight: FontWeight.bold),
             backgroundColor: Colors.deepOrange[400],
-            title: const Text("Action Games"),
+            title: const Text("Strategy Games"),
           ),
           backgroundColor: Colors.white,
           body: Align(
@@ -36,32 +36,32 @@ class ActionGameScreen extends StatelessWidget {
                   GamesAvatar(
                     image: const NetworkImage(
                         "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
-                    name: "Crowd Run 3D",
+                    name: "Pets Rush",
                   ),
                   GamesAvatar(
                     image: const NetworkImage(
                         "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
-                    name: "Running Jack",
+                    name: "Tower Crash 3D",
                   ),
                   GamesAvatar(
                     image: const NetworkImage(
                         "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
-                    name: "K.U.L.I",
+                    name: "Park Your Car",
                   ),
                   GamesAvatar(
                     image: const NetworkImage(
                         "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
-                    name: "Cannons & Soldiers",
+                    name: "Element Balls",
                   ),
                   GamesAvatar(
                     image: const NetworkImage(
                         "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
-                    name: "Civilizations Wars",
+                    name: "Sushi Roll",
                   ),
                   GamesAvatar(
                     image: const NetworkImage(
                         "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
-                    name: "Taptastic Monsters",
+                    name: "City Dunk",
                   ),
                 ]),
           )),
