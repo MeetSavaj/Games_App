@@ -47,6 +47,7 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   loading_indicator: ^3.1.0
   custom_radio_grouped_button: ^2.1.2+2
+  webview_flutter: ^3.0.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -62,6 +63,12 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/eskillsgames/
+    - assets/PTEM/
+    - assets/actiongames/
+    - assets/adventuregames/
+    - assets/strategygames/
+    - assets/sportsgames/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

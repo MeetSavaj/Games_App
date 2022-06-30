@@ -1,7 +1,40 @@
-import 'package:flutter/material.dart';
+import 'dart:io';
 
-class NoIntScreen extends StatelessWidget {
+import 'package:flutter/material.dart';
+import 'package:games_app/screens/home_screen.dart';
+
+class NoIntScreen extends StatefulWidget {
   const NoIntScreen({Key? key}) : super(key: key);
+
+  @override
+  State<NoIntScreen> createState() => _NoIntScreenState();
+}
+
+class _NoIntScreenState extends State<NoIntScreen> {
+  // ignore: non_constant_identifier_names
+  bool ActiveConnection = false;
+  String T = "";
+  // ignore: non_constant_identifier_names
+  Future CheckUserConnection() async {
+    try {
+      final result = await InternetAddress.lookup('google.com');
+      if (result.isNotEmpty && result[0].rawAddress.isNotEmpty) {
+        setState(() {
+          ActiveConnection = true;
+        });
+      }
+    } on SocketException catch (_) {
+      setState(() {
+        ActiveConnection = false;
+      });
+    }
+  }
+
+  @override
+  void initState() {
+    CheckUserConnection();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +75,20 @@ class NoIntScreen extends StatelessWidget {
               height: 200.0,
             ),
             ElevatedButton(
-                onPressed: (() {}),
+                onPressed: (() {
+                  CheckUserConnection();
+                  ActiveConnection
+                      ? Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HomeScreen()),
+                        )
+                      : Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const NoIntScreen()),
+                        );
+                }),
                 style: ElevatedButton.styleFrom(
                   primary: Colors.deepOrange[400],
                   fixedSize: const Size(150, 40),

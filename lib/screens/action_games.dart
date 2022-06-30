@@ -34,33 +34,34 @@ class ActionGameScreen extends StatelessWidget {
                 // mainAxisSpacing: 8.0,
                 children: [
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image: const AssetImage('assets/actiongames/crowdrun.png'),
                     name: "Crowd Run 3D",
+                    link:
+                        "https://games.cdn.famobi.com/html5games/c/crowd-run-3d/v040/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=28ab613b-9f40-4ab7-8f09-aa19f32e3660&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=207&original_ref=https%3A%2F%2Fgames.famobi.com%2F",
                   ),
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image:
+                        const AssetImage('assets/actiongames/runningjack.png'),
                     name: "Running Jack",
+                    link: "runng",
                   ),
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image: const AssetImage('assets/actiongames/kuli.png'),
                     name: "K.U.L.I",
                   ),
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image: const AssetImage(
+                        'assets/actiongames/cannonsandsoldeirs.png'),
                     name: "Cannons & Soldiers",
                   ),
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image: const AssetImage(
+                        'assets/actiongames/civilizationswar.png'),
                     name: "Civilizations Wars",
                   ),
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image: const AssetImage(
+                        'assets/actiongames/taptasticmonsters.png'),
                     name: "Taptastic Monsters",
                   ),
                 ]),

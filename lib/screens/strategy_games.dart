@@ -34,33 +34,33 @@ class StrategyGameScreen extends StatelessWidget {
                 // mainAxisSpacing: 8.0,
                 children: [
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image:
+                        const AssetImage('assets/strategygames/petsrush.png'),
                     name: "Pets Rush",
                   ),
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image: const AssetImage(
+                        'assets/strategygames/towercrash3d.png'),
                     name: "Tower Crash 3D",
                   ),
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image: const AssetImage(
+                        'assets/strategygames/parkyourcar.png'),
                     name: "Park Your Car",
                   ),
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image: const AssetImage(
+                        'assets/strategygames/elementballs.png'),
                     name: "Element Balls",
                   ),
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image:
+                        const AssetImage('assets/strategygames/sushiroll.png'),
                     name: "Sushi Roll",
                   ),
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image:
+                        const AssetImage('assets/strategygames/citydunk.png'),
                     name: "City Dunk",
                   ),
                 ]),

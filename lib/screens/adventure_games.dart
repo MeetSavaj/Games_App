@@ -34,33 +34,33 @@ class AdventureGameScreen extends StatelessWidget {
                 // mainAxisSpacing: 8.0,
                 children: [
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image:
+                        const AssetImage('assets/adventuregames/escooter.png'),
                     name: "E-Scooter",
                   ),
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image: const AssetImage(
+                        'assets/adventuregames/traffictom.png'),
                     name: "Traffic Torn",
                   ),
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image: const AssetImage(
+                        'assets/adventuregames/busparking3d.png'),
                     name: "Bus Parking 3D",
                   ),
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image: const AssetImage(
+                        'assets/adventuregames/highwayriderextreme.png'),
                     name: "Highway Rider Extreme",
                   ),
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image:
+                        const AssetImage('assets/adventuregames/thugracer.png'),
                     name: "Thug Racer",
                   ),
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image: const AssetImage(
+                        'assets/adventuregames/racingmonsterstrucks.png'),
                     name: "Racing Monster Trucks",
                   ),
                 ]),

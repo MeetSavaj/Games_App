@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(brightness: Brightness.dark),
       initialRoute: "/",
       routes: {
-        "/": (context) => const LaunchScreen(),
+        "/": (context) => ActionGameScreen(),
         // "/home": (context) => HomePage(),
         // "/login": (context) => LoginPage()
       },

@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:games_app/screens/home_screen.dart';
 import 'package:games_app/screens/no_internet.dart';
 import 'package:loading_indicator/loading_indicator.dart';
 
@@ -11,9 +14,28 @@ class LaunchScreen extends StatefulWidget {
 
 class _LaunchScreenState extends State<LaunchScreen> {
   bool _loading = true;
+  // ignore: non_constant_identifier_names
+  bool ActiveConnection = false;
+  String T = "";
+  // ignore: non_constant_identifier_names
+  Future CheckUserConnection() async {
+    try {
+      final result = await InternetAddress.lookup('google.com');
+      if (result.isNotEmpty && result[0].rawAddress.isNotEmpty) {
+        setState(() {
+          ActiveConnection = true;
+        });
+      }
+    } on SocketException catch (_) {
+      setState(() {
+        ActiveConnection = false;
+      });
+    }
+  }
 
   @override
   void initState() {
+    CheckUserConnection();
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
       // <-- Delay here
@@ -55,7 +77,20 @@ class _LaunchScreenState extends State<LaunchScreen> {
                         )
                       : ElevatedButton(
                           onPressed: (() {
-                            // NoInternet();
+                            CheckUserConnection();
+                            ActiveConnection
+                                ? Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const HomeScreen()),
+                                  )
+                                : Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const NoIntScreen()),
+                                  );
                           }),
                           style: ElevatedButton.styleFrom(
                             primary: Colors.white,

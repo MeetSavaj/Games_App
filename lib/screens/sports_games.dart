@@ -34,33 +34,32 @@ class SportsGameScreen extends StatelessWidget {
                 // mainAxisSpacing: 8.0,
                 children: [
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image:
+                        const AssetImage('assets/sportsgames/gardenbloom.png'),
                     name: "Garden Bloom",
                   ),
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image: const AssetImage(
+                        'assets/sportsgames/gardenmatch3d.png'),
                     name: "Garden Match 3D",
                   ),
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image: const AssetImage('assets/sportsgames/thematch3.png'),
                     name: "The Match-3",
                   ),
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image:
+                        const AssetImage('assets/sportsgames/diamondrush.png'),
                     name: "Diamond Rush",
                   ),
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image:
+                        const AssetImage('assets/sportsgames/magicjewels.png'),
                     name: "Magic Jewels",
                   ),
                   GamesAvatar(
-                    image: const NetworkImage(
-                        "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                    image: const AssetImage(
+                        'assets/sportsgames/totemiacursedmarbles.png'),
                     name: "Totemia Cursed Marbles",
                   ),
                 ]),

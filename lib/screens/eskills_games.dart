@@ -42,9 +42,9 @@ class EskillsScreen extends StatelessWidget {
               ),
               child: Row(children: const [
                 CircleAvatar(
-                  backgroundImage: NetworkImage(
-                      "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
-                ),
+                    radius: 20.0,
+                    backgroundColor: Color(0xffE95A5E),
+                    backgroundImage: AssetImage('assets/eskillsgames/50k.png')),
                 SizedBox(
                   width: 30.0,
                 ),
@@ -72,8 +72,10 @@ class EskillsScreen extends StatelessWidget {
               ),
               child: Row(children: const [
                 CircleAvatar(
-                  backgroundImage: NetworkImage(
-                      "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                  radius: 20.0,
+                  backgroundColor: Color(0xff9B5E31),
+                  backgroundImage:
+                      AssetImage('assets/eskillsgames/wincoins.png'),
                 ),
                 SizedBox(
                   width: 30.0,
@@ -102,8 +104,9 @@ class EskillsScreen extends StatelessWidget {
               ),
               child: Row(children: const [
                 CircleAvatar(
-                  backgroundImage: NetworkImage(
-                      "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+                  radius: 20.0,
+                  backgroundColor: Color(0xff3C3279),
+                  backgroundImage: AssetImage('assets/eskillsgames/50k2.png'),
                 ),
                 SizedBox(
                   width: 30.0,
@@ -117,27 +120,37 @@ class EskillsScreen extends StatelessWidget {
             const SizedBox(
               height: 30.0,
             ),
-            Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
-              CircleAvatar(
-                radius: 40.0,
-                backgroundImage: NetworkImage(
-                    "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              GestureDetector(
+                onTap: (() {}),
+                child: const CircleAvatar(
+                  radius: 40.0,
+                  backgroundColor: Colors.white,
+                  backgroundImage: AssetImage('assets/eskillsgames/50kc.png'),
+                ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 30.0,
               ),
-              CircleAvatar(
-                radius: 40.0,
-                backgroundImage: NetworkImage(
-                    "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+              GestureDetector(
+                onTap: () {},
+                child: const CircleAvatar(
+                  radius: 40.0,
+                  backgroundColor: Colors.white,
+                  backgroundImage: AssetImage('assets/eskillsgames/gkquiz.png'),
+                ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 30.0,
               ),
-              CircleAvatar(
-                radius: 40.0,
-                backgroundImage: NetworkImage(
-                    "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"),
+              GestureDetector(
+                onTap: (() {}),
+                child: const CircleAvatar(
+                  radius: 40.0,
+                  backgroundColor: Colors.white,
+                  backgroundImage:
+                      AssetImage('assets/eskillsgames/iplquiz.png'),
+                ),
               ),
             ]),
           ]),
