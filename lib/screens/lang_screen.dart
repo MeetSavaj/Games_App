@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:custom_radio_grouped_button/custom_radio_grouped_button.dart';
+import 'package:games_app/screens/home_screen.dart';
 
 // ignore: constant_identifier_names
 enum SingingCharacter { Hindi, English }
@@ -84,7 +85,13 @@ class _LangScreenState extends State<LangScreen> {
                     height: 280.0,
                   ),
                   ElevatedButton(
-                      onPressed: (() {}),
+                      onPressed: (() {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HomeScreen()),
+                        );
+                      }),
                       style: ElevatedButton.styleFrom(
                         primary: Colors.deepOrange[400],
                         fixedSize: const Size(150, 40),

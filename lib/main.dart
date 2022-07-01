@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.light,
       theme: ThemeData(
         // appBarTheme: const AppBarTheme(
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(brightness: Brightness.dark),
       initialRoute: "/",
       routes: {
-        "/": (context) => ActionGameScreen(),
+        "/": (context) => const LaunchScreen(),
         // "/home": (context) => HomePage(),
         // "/login": (context) => LoginPage()
       },

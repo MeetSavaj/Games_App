@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:games_app/screens/eskills_games.dart';
+import 'package:games_app/screens/play_to_earn_money.dart';
 
 class EarnMoneyScreen extends StatelessWidget {
   const EarnMoneyScreen({Key? key}) : super(key: key);
@@ -9,7 +11,9 @@ class EarnMoneyScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: const Icon(
               Icons.arrow_back_sharp,
               color: Colors.white,
@@ -28,7 +32,13 @@ class EarnMoneyScreen extends StatelessWidget {
               height: 300.0,
             ),
             ElevatedButton(
-              onPressed: (() {}),
+              onPressed: (() {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const EskillsScreen()),
+                );
+              }),
               style: ElevatedButton.styleFrom(
                 primary: Colors.deepOrange[400],
                 fixedSize: const Size(350, 50),
@@ -49,7 +59,12 @@ class EarnMoneyScreen extends StatelessWidget {
               height: 15.0,
             ),
             ElevatedButton(
-              onPressed: (() {}),
+              onPressed: (() {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const PTEMScreen()),
+                );
+              }),
               style: ElevatedButton.styleFrom(
                 primary: Colors.deepOrange[400],
                 fixedSize: const Size(350, 50),

@@ -1,7 +1,6 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:games_app/screens/home_screen.dart';
+import 'package:games_app/screens/launch_screen.dart';
 
 class NoIntScreen extends StatefulWidget {
   const NoIntScreen({Key? key}) : super(key: key);
@@ -81,7 +80,7 @@ class _NoIntScreenState extends State<NoIntScreen> {
                       ? Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const HomeScreen()),
+                              builder: (context) => const LaunchScreen()),
                         )
                       : Navigator.push(
                           context,

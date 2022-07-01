@@ -13,7 +13,9 @@ class ActionGameScreen extends StatelessWidget {
       child: Scaffold(
           appBar: AppBar(
             leading: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context);
+              },
               icon: const Icon(
                 Icons.arrow_back_sharp,
                 color: Colors.white,
@@ -43,26 +45,35 @@ class ActionGameScreen extends StatelessWidget {
                     image:
                         const AssetImage('assets/actiongames/runningjack.png'),
                     name: "Running Jack",
-                    link: "runng",
+                    link:
+                        "https://games.cdn.famobi.com/html5games/k/kumba-kool/v120/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=16afbe05-a248-4978-b982-57cd59f5d615&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=648&original_ref=https%3A%2F%2Fgames.famobi.com%2F",
                   ),
                   GamesAvatar(
                     image: const AssetImage('assets/actiongames/kuli.png'),
                     name: "K.U.L.I",
+                    link:
+                        "https://games.cdn.famobi.com/html5games/z/zombies-eat-my-stocking/v5/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=10158f0e-0fd1-4f73-b38c-108a3f684146&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=649&original_ref=https%3A%2F%2Fgames.famobi.com%2F",
                   ),
                   GamesAvatar(
                     image: const AssetImage(
                         'assets/actiongames/cannonsandsoldeirs.png'),
                     name: "Cannons & Soldiers",
+                    link:
+                        "https://games.cdn.famobi.com/html5games/c/cannons-and-soldiers/v6/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=f1baf796-217a-4d1b-bb6e-77924caf7db5&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=649&original_ref=https%3A%2F%2Fgames.famobi.com%2F",
                   ),
                   GamesAvatar(
                     image: const AssetImage(
                         'assets/actiongames/civilizationswar.png'),
                     name: "Civilizations Wars",
+                    link:
+                        "https://games.cdn.famobi.com/html5games/c/civilizations-wars-all-stars/v130/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=2001681a-0f53-4691-9318-04e419ac7c0c&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=649&original_ref=https%3A%2F%2Fgames.famobi.com%2F",
                   ),
                   GamesAvatar(
                     image: const AssetImage(
                         'assets/actiongames/taptasticmonsters.png'),
                     name: "Taptastic Monsters",
+                    link:
+                        "https://games.cdn.famobi.com/html5games/t/taptastic-monsters/v5/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=f262b333-613a-44a1-825a-76878708ac94&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=650&original_ref=https%3A%2F%2Fgames.famobi.com%2F",
                   ),
                 ]),
           )),

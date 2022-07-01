@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:games_app/screens/action_games.dart';
+import 'package:games_app/screens/adventure_games.dart';
+import 'package:games_app/screens/sports_games.dart';
+import 'package:games_app/screens/strategy_games.dart';
 
 class PopGameScreen extends StatelessWidget {
   const PopGameScreen({Key? key}) : super(key: key);
@@ -9,7 +13,9 @@ class PopGameScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: const Icon(
               Icons.arrow_back_sharp,
               color: Colors.white,
@@ -28,7 +34,12 @@ class PopGameScreen extends StatelessWidget {
               height: 200.0,
             ),
             ElevatedButton(
-              onPressed: (() {}),
+              onPressed: (() {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ActionGameScreen()),
+                );
+              }),
               style: ElevatedButton.styleFrom(
                 primary: Colors.deepOrange[400],
                 fixedSize: const Size(350, 50),
@@ -49,7 +60,13 @@ class PopGameScreen extends StatelessWidget {
               height: 15.0,
             ),
             ElevatedButton(
-              onPressed: (() {}),
+              onPressed: (() {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => AdventureGameScreen()),
+                );
+              }),
               style: ElevatedButton.styleFrom(
                 primary: Colors.deepOrange[400],
                 fixedSize: const Size(350, 50),
@@ -70,7 +87,12 @@ class PopGameScreen extends StatelessWidget {
               height: 15.0,
             ),
             ElevatedButton(
-              onPressed: (() {}),
+              onPressed: (() {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => StrategyGameScreen()),
+                );
+              }),
               style: ElevatedButton.styleFrom(
                 primary: Colors.deepOrange[400],
                 fixedSize: const Size(350, 50),
@@ -91,7 +113,12 @@ class PopGameScreen extends StatelessWidget {
               height: 15.0,
             ),
             ElevatedButton(
-              onPressed: (() {}),
+              onPressed: (() {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SportsGameScreen()),
+                );
+              }),
               style: ElevatedButton.styleFrom(
                 primary: Colors.deepOrange[400],
                 fixedSize: const Size(350, 50),

@@ -9,7 +9,7 @@ class WebViewContainer extends StatefulWidget {
   const WebViewContainer(this.link);
   @override
   // ignore: no_logic_in_create_state
-  createState() => _WebViewContainerState(this.link);
+  createState() => _WebViewContainerState(link);
 }
 
 class _WebViewContainerState extends State<WebViewContainer> {
@@ -27,16 +27,14 @@ class _WebViewContainerState extends State<WebViewContainer> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(),
-        body: Column(
-          children: [
-            Expanded(
-                child: WebView(
-                    key: _key,
-                    javascriptMode: JavascriptMode.unrestricted,
-                    initialUrl: _link))
-          ],
-        ));
+    return Column(
+      children: [
+        Expanded(
+            child: WebView(
+                key: _key,
+                javascriptMode: JavascriptMode.unrestricted,
+                initialUrl: _link))
+      ],
+    );
   }
 }

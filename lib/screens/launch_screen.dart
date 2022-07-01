@@ -1,7 +1,7 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:games_app/screens/home_screen.dart';
+import 'package:games_app/screens/lang_screen.dart';
 import 'package:games_app/screens/no_internet.dart';
 import 'package:loading_indicator/loading_indicator.dart';
 
@@ -63,6 +63,14 @@ class _LaunchScreenState extends State<LaunchScreen> {
           child: Column(mainAxisAlignment: MainAxisAlignment.end,
               // crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                Image.asset(
+                  'assets/images/launchimage.png',
+                  width: 240,
+                  height: 240,
+                ),
+                const SizedBox(
+                  height: 250,
+                ),
                 Align(
                   alignment: Alignment.center,
                   child: _loading
@@ -83,7 +91,7 @@ class _LaunchScreenState extends State<LaunchScreen> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            const HomeScreen()),
+                                            const LangScreen()),
                                   )
                                 : Navigator.push(
                                     context,
@@ -101,7 +109,7 @@ class _LaunchScreenState extends State<LaunchScreen> {
                                 fontStyle: FontStyle.normal,
                                 fontWeight: FontWeight.bold),
                             shadowColor: Colors.black,
-                            elevation: 10.0,
+                            // elevation: 10.0,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10.0),
                             ),
