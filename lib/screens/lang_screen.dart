@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:custom_radio_grouped_button/custom_radio_grouped_button.dart';
 import 'package:games_app/screens/home_screen.dart';
 
 // ignore: constant_identifier_names
@@ -13,7 +12,7 @@ class LangScreen extends StatefulWidget {
 }
 
 class _LangScreenState extends State<LangScreen> {
-  SingingCharacter? _character = SingingCharacter.English;
+  SingingCharacter? _character;
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -86,17 +85,55 @@ class _LangScreenState extends State<LangScreen> {
                   ),
                   ElevatedButton(
                       onPressed: (() {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const HomeScreen()),
-                        );
+                        if (_character == SingingCharacter.English ||
+                            _character == SingingCharacter.Hindi) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const HomeScreen()),
+                          );
+                        } else {
+                          showDialog(
+                            context: context,
+                            builder: (ctx) => AlertDialog(
+                              title: const Text("Language Selection"),
+                              content:
+                                  const Text("Please select the language!"),
+                              actions: <Widget>[
+                                Align(
+                                  alignment: Alignment.center,
+                                  child: ElevatedButton(
+                                    onPressed: () => Navigator.pop(context),
+
+                                    style: ElevatedButton.styleFrom(
+                                      primary: Colors.deepOrange[400],
+                                      fixedSize: const Size(80, 30),
+                                      textStyle: const TextStyle(
+                                          fontSize: 15,
+                                          fontStyle: FontStyle.normal,
+                                          fontWeight: FontWeight.bold),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(10.0),
+                                      ),
+                                    ),
+                                    //return true when click on "Yes"
+                                    child: const Text(
+                                      'Okay',
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          );
+                        }
                       }),
                       style: ElevatedButton.styleFrom(
                         primary: Colors.deepOrange[400],
                         fixedSize: const Size(150, 40),
                         textStyle: const TextStyle(
-                            fontSize: 15,
+                            fontSize: 18,
                             fontStyle: FontStyle.normal,
                             fontWeight: FontWeight.bold),
                         shadowColor: Colors.black,

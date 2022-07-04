@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:webview_flutter/webview_flutter.dart';
 
 class WebViewContainer extends StatefulWidget {

@@ -1,8 +1,8 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:games_app/screens/home_screen.dart';
 import 'package:games_app/screens/lang_screen.dart';
 import 'package:games_app/screens/no_internet.dart';
+// ignore: depend_on_referenced_packages
 import 'package:loading_indicator/loading_indicator.dart';
 
 class LaunchScreen extends StatefulWidget {
