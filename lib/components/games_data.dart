@@ -29,7 +29,10 @@ class _GamesAvatarState extends State<GamesAvatar> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         GestureDetector(
-          onTap: () async => _handleURLButtonPress(context, widget.link),
+          onTap: () {
+            // showinterstitialads();
+            _handleURLButtonPress(context, widget.link);
+          },
           child: CircleAvatar(
             backgroundImage: widget.image,
             radius: 40.0,

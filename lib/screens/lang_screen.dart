@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:games_app/screens/home_screen.dart';
+import 'package:games_app/components/ads_url.dart';
+import 'package:games_app/screens/games_screen.dart';
 
 // ignore: constant_identifier_names
 enum SingingCharacter { Hindi, English }
@@ -26,15 +27,22 @@ class _LangScreenState extends State<LangScreen> {
               key: _formKey,
               child: Column(
                 children: [
+                  GestureDetector(
+                    onTap: () => url(),
+                    child: Image.asset(
+                      "assets/nativeads/top_ads.png",
+                      scale: 0.9,
+                    ),
+                  ),
                   const SizedBox(
-                    height: 200.0,
+                    height: 20.0,
                   ),
                   const Text(
                     "Select Language",
                     style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
-                        fontSize: 20.0),
+                        fontSize: 25.0),
                   ),
                   const Text(
                     "Choose the language you want to processed with...",
@@ -81,7 +89,17 @@ class _LangScreenState extends State<LangScreen> {
                     ),
                   ),
                   const SizedBox(
-                    height: 280.0,
+                    height: 20.0,
+                  ),
+                  GestureDetector(
+                    onTap: () => url(),
+                    child: Image.asset(
+                      "assets/nativeads/tech_quiz_bottom.png",
+                      scale: 1.0,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20.0,
                   ),
                   ElevatedButton(
                       onPressed: (() {
@@ -90,7 +108,7 @@ class _LangScreenState extends State<LangScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const HomeScreen()),
+                                builder: (context) => const GamesScreen()),
                           );
                         } else {
                           showDialog(
@@ -144,7 +162,7 @@ class _LangScreenState extends State<LangScreen> {
                       child: const Text(
                         "Continue",
                         style: TextStyle(color: Colors.white),
-                      ))
+                      )),
                 ],
               ),
             )),

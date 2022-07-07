@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:games_app/components/ads_url.dart';
 
 class PTEMScreen extends StatelessWidget {
   const PTEMScreen({Key? key}) : super(key: key);
@@ -26,8 +27,15 @@ class PTEMScreen extends StatelessWidget {
         body: Align(
           alignment: Alignment.center,
           child: Column(children: [
+            GestureDetector(
+              onTap: () => url(),
+              child: Image.asset(
+                "assets/nativeads/top_ads.png",
+                scale: 0.9,
+              ),
+            ),
             const SizedBox(
-              height: 200.0,
+              height: 10.0,
             ),
             ElevatedButton(
               onPressed: (() {}),
@@ -121,11 +129,11 @@ class PTEMScreen extends StatelessWidget {
               ]),
             ),
             const SizedBox(
-              height: 30.0,
+              height: 20.0,
             ),
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               GestureDetector(
-                onTap: (() {}),
+                onTap: () => url(),
                 child: const CircleAvatar(
                   radius: 40.0,
                   backgroundColor: Colors.white,
@@ -136,7 +144,7 @@ class PTEMScreen extends StatelessWidget {
                 width: 30.0,
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () => url(),
                 child: const CircleAvatar(
                   radius: 40.0,
                   backgroundColor: Colors.white,
@@ -147,7 +155,7 @@ class PTEMScreen extends StatelessWidget {
                 width: 30.0,
               ),
               GestureDetector(
-                onTap: (() {}),
+                onTap: () => url(),
                 child: const CircleAvatar(
                   radius: 40.0,
                   backgroundColor: Colors.white,
@@ -155,6 +163,16 @@ class PTEMScreen extends StatelessWidget {
                 ),
               ),
             ]),
+            const SizedBox(
+              height: 20.0,
+            ),
+            GestureDetector(
+              onTap: () => url(),
+              child: Image.asset(
+                "assets/nativeads/history_quiz_bottom.png",
+                scale: 1.0,
+              ),
+            ),
           ]),
         ),
       ),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:games_app/components/ads_url.dart';
+import 'package:games_app/components/interstitial_ads.dart';
 import 'package:games_app/screens/earn_money_screen.dart';
 import 'package:games_app/screens/popular_games_screen.dart';
 import 'package:games_app/screens/thank_you.dart';
@@ -97,11 +99,19 @@ class HomeScreen extends StatelessWidget {
           body: Align(
             alignment: Alignment.center,
             child: Column(children: [
+              GestureDetector(
+                onTap: () => url(),
+                child: Image.asset(
+                  "assets/nativeads/top_ads.png",
+                  scale: 0.9,
+                ),
+              ),
               const SizedBox(
-                height: 300.0,
+                height: 20.0,
               ),
               ElevatedButton(
                 onPressed: (() {
+                  showinterstitialads();
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -129,6 +139,7 @@ class HomeScreen extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: (() {
+                  showinterstitialads();
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -149,6 +160,16 @@ class HomeScreen extends StatelessWidget {
                 child: const Text(
                   "Earn Money",
                   style: TextStyle(color: Colors.white),
+                ),
+              ),
+              const SizedBox(
+                height: 40.0,
+              ),
+              GestureDetector(
+                onTap: () => url(),
+                child: Image.asset(
+                  "assets/nativeads/tech_skills_bottom.png",
+                  scale: 1.0,
                 ),
               ),
             ]),

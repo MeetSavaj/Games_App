@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:games_app/components/ads_url.dart';
+import 'package:games_app/components/interstitial_ads.dart';
 import 'package:games_app/screens/action_games.dart';
 import 'package:games_app/screens/adventure_games.dart';
 import 'package:games_app/screens/sports_games.dart';
@@ -30,11 +32,19 @@ class PopGameScreen extends StatelessWidget {
         body: Align(
           alignment: Alignment.center,
           child: Column(children: [
+            GestureDetector(
+              onTap: () => url(),
+              child: Image.asset(
+                "assets/nativeads/top_ads.png",
+                scale: 0.9,
+              ),
+            ),
             const SizedBox(
-              height: 200.0,
+              height: 20.0,
             ),
             ElevatedButton(
               onPressed: (() {
+                showinterstitialads();
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => ActionGameScreen()),
@@ -57,10 +67,11 @@ class PopGameScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 15.0,
+              height: 10.0,
             ),
             ElevatedButton(
               onPressed: (() {
+                showinterstitialads();
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -84,10 +95,11 @@ class PopGameScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 15.0,
+              height: 10.0,
             ),
             ElevatedButton(
               onPressed: (() {
+                showinterstitialads();
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => StrategyGameScreen()),
@@ -110,10 +122,11 @@ class PopGameScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 15.0,
+              height: 10.0,
             ),
             ElevatedButton(
               onPressed: (() {
+                showinterstitialads();
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => SportsGameScreen()),
@@ -133,6 +146,16 @@ class PopGameScreen extends StatelessWidget {
               child: const Text(
                 "Sports Games",
                 style: TextStyle(color: Colors.white),
+              ),
+            ),
+            const SizedBox(
+              height: 40.0,
+            ),
+            GestureDetector(
+              onTap: () => url(),
+              child: Image.asset(
+                "assets/nativeads/cricket_quiz_bottom.png",
+                scale: 1.0,
               ),
             ),
           ]),

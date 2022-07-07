@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:games_app/components/ads_url.dart';
 
 class ThankYouScreen extends StatelessWidget {
   const ThankYouScreen({Key? key}) : super(key: key);
@@ -15,8 +16,15 @@ class ThankYouScreen extends StatelessWidget {
           alignment: Alignment.center,
           child: Column(
             children: [
+              GestureDetector(
+                onTap: () => url(),
+                child: Image.asset(
+                  "assets/nativeads/top_ads.png",
+                  scale: 0.9,
+                ),
+              ),
               const SizedBox(
-                height: 150.0,
+                height: 10.0,
               ),
               Image.asset(
                 'assets/images/thankyou.png',
@@ -42,7 +50,17 @@ class ThankYouScreen extends StatelessWidget {
                     TextStyle(color: Colors.black, fontWeight: FontWeight.w400),
               ),
               const SizedBox(
-                height: 320.0,
+                height: 10.0,
+              ),
+              GestureDetector(
+                onTap: () => url(),
+                child: Image.asset(
+                  "assets/nativeads/playcricket_quiz_bottom.png",
+                  scale: 1.0,
+                ),
+              ),
+              const SizedBox(
+                height: 10.0,
               ),
               ElevatedButton(
                   onPressed: (() {
@@ -63,7 +81,7 @@ class ThankYouScreen extends StatelessWidget {
                   child: const Text(
                     "Thank You",
                     style: TextStyle(color: Colors.white),
-                  ))
+                  )),
             ],
           ),
         ),

@@ -135,7 +135,7 @@ class _LaunchScreenState extends State<LaunchScreen> {
                         ),
                 ),
                 const SizedBox(
-                  height: 30.0,
+                  height: 50.0,
                 ),
               ]),
         ),

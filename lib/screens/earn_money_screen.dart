@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:games_app/components/ads_url.dart';
+import 'package:games_app/components/interstitial_ads.dart';
 import 'package:games_app/screens/eskills_games.dart';
 import 'package:games_app/screens/play_to_earn_money.dart';
 
@@ -28,11 +30,19 @@ class EarnMoneyScreen extends StatelessWidget {
         body: Align(
           alignment: Alignment.center,
           child: Column(children: [
+            GestureDetector(
+              onTap: () => url(),
+              child: Image.asset(
+                "assets/nativeads/top_ads.png",
+                scale: 0.9,
+              ),
+            ),
             const SizedBox(
-              height: 300.0,
+              height: 20.0,
             ),
             ElevatedButton(
               onPressed: (() {
+                showinterstitialads();
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -60,6 +70,7 @@ class EarnMoneyScreen extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: (() {
+                showinterstitialads();
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const PTEMScreen()),
@@ -79,6 +90,16 @@ class EarnMoneyScreen extends StatelessWidget {
               child: const Text(
                 "Play To Earn games",
                 style: TextStyle(color: Colors.white),
+              ),
+            ),
+            const SizedBox(
+              height: 40.0,
+            ),
+            GestureDetector(
+              onTap: () => url(),
+              child: Image.asset(
+                "assets/nativeads/mega_quiz_bottom.png",
+                scale: 1.0,
               ),
             ),
           ]),
